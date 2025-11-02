@@ -4,3 +4,300 @@
 *:after {
   box-sizing: border-box;
 }
+
+/******* Body Styles ***************/
+#top-header a {
+  text-decoration-line: none;
+  color:black
+}
+
+#top-header {
+  display: flex;
+  justify-content: space-between; /* pushes one to left, one to right */
+  align-items: center;            /* vertically centers them */
+  padding: 10px 20px;
+}
+
+.siteName {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#tools {
+  text-transform:uppercase;
+  font-size: 15px;
+}
+
+nav{
+  background-color: black;
+  padding: 5px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-left: 10em;
+  padding-right: 10em;
+}
+
+nav, ul, li {
+  color: white;
+  list-style-type: none;
+}
+
+.hero-area {
+  margin: auto;
+  background-image: url('/images/vehicles/delorean-tn.jpg');
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position:center;
+  display: flex;  
+  color:rgb(70, 212, 255);
+  padding: 20px;
+
+}
+
+#hero-right {
+  padding-left: 170px;
+}
+
+#transparent{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger;
+  font-weight: bold;
+  align-items: center;
+  background-color: rgba(255, 252, 252, 0.5);
+  padding-right:50px;
+}
+
+#button, button {
+  background-color:rgb(70, 212, 255);
+  color: black;
+  padding: 10px 20px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  justify-content:space-evenly;
+}
+
+#left-heading {
+  padding-bottom: 20px;
+  padding-left: 25px;
+}
+
+#heading {
+  padding-bottom: 20px;
+  padding-left: 25px;
+} 
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px; /* space between items */
+  padding: 20px;
+  text-align: center;
+}
+
+#grid-image{
+  background-color: rgb(70, 212, 255);
+  border-style: solid;
+  padding-top: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+#grid-image img {
+  width: 80%;
+  height: 100px;          /* fixed height for uniformity */
+  object-fit: cover;      /* ensures image covers area without stretching */
+  border-radius: 8px;
+}
+
+
+#list-items #unordered-list ul li{
+  color:black;
+  list-style-type: disc;
+  padding: 20px;
+}
+
+
+
+
+/******* Mobile View ***************/
+@media (max-width: 768px) {
+
+  /* Top Header */
+  #top-header {
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+
+  .siteName, a{
+    font-size: 24px;
+    
+  }
+
+  #tools a {
+    font-size: 10px;
+    text-align: left;
+  }
+
+  #tools {
+    font-size: 13px;
+  }
+
+  /* Navigation */
+  nav ul {
+    flex-direction: row;
+    padding: 1px 10px 1px 10px;
+    margin: 0;
+    text-align: center;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+
+  /* Hero Area */
+  .hero-area {
+    flex-direction: row;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80%;
+    padding: 10px 10px;
+    text-align: left;
+  
+  }
+
+  #hero-right {
+    padding-left: 0;
+  }
+
+  #transparent {
+    padding: 10px 5px;
+    font-size: 12px;
+  }
+
+  #button, button {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  /* Section Layout */
+  .section {
+    display: none;
+  }
+
+  #left-heading, #heading {
+    display: none;
+  }
+
+  /* Grid */
+  #grid {
+    display: none;
+  }
+
+  #grid-image {
+    display: none;
+  }
+
+  #grid-image img {
+    display: none;
+  }
+
+  /* List Items */
+  #list-items #unordered-list ul li {
+    display: none;
+  }
+
+  /* Section Layout New*/
+  .mobile-section {
+    flex-direction: row;
+    align-items: left;
+  }
+
+  #mobile-left-heading, #mobile-heading {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  /* Grid */
+  #mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px; /* space between items */
+    padding: 1px;
+    text-align: center;
+    
+  }
+
+  #mobile-grid-image {
+    padding: 3px;
+    background-color: rgb(70, 212, 255);
+    border-style: solid;
+    padding-top: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  #mobile-grid-image img {
+    width: 100%;
+    height: 100px;          /* fixed height for uniformity */
+    object-fit: cover;      /* ensures image covers area without stretching */
+    border-radius: 5px;
+  }
+
+  #mobile-upgrades, #mobile-link, a{
+    font-size: 18px;
+  }
+
+  /* List Items */
+  #mobile-list-items #mobile-unordered-list ul li {
+    color:black;
+    list-style-type: disc;
+    padding: 10px 0px;
+  }
+}
+/******* End Mobile View ***************/
+
+/******* Big Screen display: none; ***************/
+/******* Desktop View Only ***************/
+@media (min-width: 769px) {
+
+  /* Section Layout */
+  .mobile-section {
+    display: none;
+  }
+
+  #mobile-left-heading,
+  #mobile-heading {
+    display: none;
+  }
+
+  /* Grid */
+  #mobile-grid {
+    display: none;
+  }
+
+  #mobile-grid-image {
+    display: none;
+  }
+
+  #mobile-grid-image img {
+    display: none;
+  }
+
+  /* List Items */
+  #mobile-list-items #unordered-list ul li {
+    display: none;
+  }
+}
+/******* End Desktop View Only ***************/
